@@ -21,7 +21,7 @@ print("This is a simple HTTP POST example")
 # Content-Length: 7
 # 
 # u=a&p=b"""
-#
+
 req = """POST /python/login1.php HTTP/1.1
 Host: attackdirect.samsclass.info
 User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0
@@ -34,7 +34,7 @@ Content-Type: application/x-www-form-urlencoded
 Content-Length: 7
 
 u=a&p=b"""
-#
+
 # Updated to work in Python3
 # but the POST test needs to have the "Accept-Encoding: gzip, deflate" line removed.
 # I'm sure I can find the string formating to let the GZIP data print... 
@@ -46,7 +46,7 @@ s.connect(("attackdirect.samsclass.info", 80))
 s.send((req).encode()) 
 print(s.recv(1024).decode())
 s.close()
-#
+
 # Code Example for Python 2.7 - still use the req variable
 # import socket
 # socket.setdefaulttimeout(2)
